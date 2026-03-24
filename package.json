@@ -1,0 +1,20 @@
+{
+  "name": "moew",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "bun run --filter @moew/web dev",
+    "dev:api": "bun run --filter @moew/api start:dev",
+    "build:web": "bun run --filter @moew/web build",
+    "build:api": "bun run --filter @moew/api build",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.0"
+  }
+}
